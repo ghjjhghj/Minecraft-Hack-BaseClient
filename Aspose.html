@@ -1,0 +1,30 @@
+package exampleshtml;
+
+import com.aspose.html.HTMLDocument;
+import com.aspose.html.License;
+import com.aspose.html.dom.Text;
+
+public class CreateHTML {
+    
+ public static void main(String[] argsHTML) throws Exception {
+     
+    // Setting API license to use complete featyres
+    License lic = new License();
+    lic.setLicense("HTML.Total.Java.lic");
+     
+    // Initialize an empty HTMLDocument object instance
+    HTMLDocument htmldocument = new HTMLDocument();
+    
+    // Adding a text element to hold text for HTML document
+    Text text = htmldocument.createTextNode("Example HTML document generated "
+            + "using Aspose.HTML for Java");
+
+    // Insert the text element inside HTML body
+    htmldocument.getBody().appendChild(text);
+
+    // Save the generated HTML file to disk
+    htmldocument.save("Created_HTML_File.html");
+   
+ }
+    
+}
